@@ -1,0 +1,32 @@
+
+name: kvs
+version: "1.0"
+author: limingfang97@outlook.com
+about: in-memory kv storage cli program
+args:
+  - version:
+      short: V
+      long: Version
+      help: Print the version
+subcommands:
+  - set:
+      about: set key-value pair
+      args:
+        - key:
+            index: 1
+            required: true
+        - value:
+            index: 2
+            required: true
+  - get:
+      about: get value base on key
+      args:
+        - key:
+            index: 1
+            required: true
+  - rm:
+      about: removes a given key
+      args:
+        - key:
+            index: 1
+            required: true
